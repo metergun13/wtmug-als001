@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2563eb">
+    <title>Mini Görevler</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <main class="container">
+        <header class="app-header">
+            <div>
+                <h1>Mini Görevler</h1>
+                <p class="description">
+                    Basit bir Progressive Web Application
+                </p>
+            </div>
+            <button id="themeToggle" class="theme-toggle" title="Gece modunu aç/kapat">
+                🌙
+            </button>
+        </header>
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="Yeni görev yazın...">
+            <button id="addButton">Ekle</button>
+        </div>
+        <ul id="taskList"></ul>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

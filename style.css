@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    width: min(92%, 600px);
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.app-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.description {
+    color: #666;
+    margin-top: 0;
+    transition: color 0.3s;
+}
+
+.theme-toggle {
+    background: transparent;
+    font-size: 24px;
+    padding: 8px;
+    border-radius: 50%;
+    line-height: 1;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: scale(1.1);
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#addButton {
+    background: #2563eb;
+    color: white;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: white;
+    margin-bottom: 10px;
+    padding: 14px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.task.completed span {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.delete-button {
+    background: #ef4444;
+    color: white;
+}
+
+/* ===========================
+   GECE MODU
+   =========================== */
+
+body.dark-mode {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark-mode .description {
+    color: #9ca3af;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode input {
+    background: #1f2937;
+    color: #f9fafb;
+    border-color: #374151;
+}
+
+body.dark-mode input::placeholder {
+    color: #6b7280;
+}
+
+body.dark-mode #addButton {
+    background: #3b82f6;
+}
+
+body.dark-mode .task {
+    background: #1f2937;
+    color: #f9fafb;
+}
+
+body.dark-mode .delete-button {
+    background: #dc2626;
+}
